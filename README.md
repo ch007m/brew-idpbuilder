@@ -92,14 +92,18 @@ drwxr-xr-x@  4 cmoullia  staff    128 16 Jan 18:29 share/
 ```
 
 - Test the formula by doing: `brew test idpbuilder`
-- To generate the bottles, rebuild it:
+
+## To generate the bottles
+
+- Uninstall the package 
 ```
 ❯ brew uninstall idpbuilder
 Uninstalling /opt/homebrew/Cellar/idpbuilder/0.8.1... (9 files, 46.2MB)
-
+```
+- Rebuild it using the flag `--build-bottle`
 ❯ HOMEBREW_NO_INSTALL_FROM_API=1 brew install --build-bottle idpbuilder
 ```
-- And then you can get it:
+- Then you can bootle it or them using the command
 ```bash
 ❯ HOMEBREW_NO_INSTALL_FROM_API=1 brew bottle idpbuilder
 
