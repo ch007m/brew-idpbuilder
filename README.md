@@ -65,3 +65,28 @@ end
 ```bash
 HOMEBREW_NO_INSTALL_FROM_API=1 brew install --build-from-source --verbose --debug idpbuilder
 ```
+- If the build succeeds, you should then find the executable like its cellar folder
+```bash
+❯ ls -la $(brew --prefix)/bin | grep idpbuilder
+lrwxr-xr-x@    1 cmoullia  staff        41 16 Jan 18:29 idpbuilder -> ../Cellar/idpbuilder/0.8.1/bin/idpbuilder
+
+❯ ls -la $(brew --cellar)/idpbuilder
+total 0
+drwxr-xr-x@   3 cmoullia  staff    96 16 Jan 18:29 ./
+drwxrwxr-x@ 238 cmoullia  staff  7616 16 Jan 18:29 ../
+drwxr-xr-x@  10 cmoullia  staff   320 16 Jan 18:29 0.8.1/
+
+/opt/homebrew/Library/Taps/homebrew/homebrew-core on master •
+❯ ls -la $(brew --cellar)/idpbuilder/0.8.1
+total 48
+drwxr-xr-x@ 10 cmoullia  staff    320 16 Jan 18:29 ./
+drwxr-xr-x@  3 cmoullia  staff     96 16 Jan 18:29 ../
+drwxr-xr-x@  3 cmoullia  staff     96 16 Jan 18:29 .brew/
+-rw-r--r--@  1 cmoullia  staff    962 16 Jan 18:29 INSTALL_RECEIPT.json
+-rw-r--r--@  1 cmoullia  staff  11341 16 Jan 18:25 LICENSE
+-rw-r--r--@  1 cmoullia  staff   3028 16 Jan 18:25 README.md
+drwxr-xr-x@  3 cmoullia  staff     96 16 Jan 18:29 bin/
+drwxr-xr-x@  3 cmoullia  staff     96 16 Jan 18:29 etc/
+-rw-r--r--@  1 cmoullia  staff   1729 16 Jan 18:29 sbom.spdx.json
+drwxr-xr-x@  4 cmoullia  staff    128 16 Jan 18:29 share/
+```
