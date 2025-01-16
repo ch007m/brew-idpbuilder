@@ -92,3 +92,22 @@ drwxr-xr-x@  4 cmoullia  staff    128 16 Jan 18:29 share/
 ```
 
 - Test the formula by doing: `brew test idpbuilder`
+- To generate the bottles, rebuild it:
+```
+❯ brew uninstall idpbuilder
+Uninstalling /opt/homebrew/Cellar/idpbuilder/0.8.1... (9 files, 46.2MB)
+
+❯ HOMEBREW_NO_INSTALL_FROM_API=1 brew install --build-bottle idpbuilder
+```
+- And then you can get it:
+```bash
+❯ HOMEBREW_NO_INSTALL_FROM_API=1 brew bottle idpbuilder
+
+==> Determining idpbuilder bottle rebuild...
+==> Bottling idpbuilder--0.8.1.arm64_sonoma.bottle.tar.gz...
+==> Detecting if idpbuilder--0.8.1.arm64_sonoma.bottle.tar.gz is relocatable...
+./idpbuilder--0.8.1.arm64_sonoma.bottle.tar.gz
+  bottle do
+    sha256 cellar: :any_skip_relocation, arm64_sonoma: "afa70a99adf6120b23685f663cca39a51ae9efb36f4c85f7fcc5a633b9880778"
+  end
+```
