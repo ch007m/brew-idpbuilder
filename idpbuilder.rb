@@ -22,7 +22,7 @@ class Idpbuilder < Formula
   end
 
   test do
-    assert_match "Idpbuilder is a CLI to manage your IDP clusters.",
+    assert_match "Manage reference IDPs",
                  shell_output("#{bin}/idpbuilder -h")
   end
 end
