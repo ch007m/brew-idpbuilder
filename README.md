@@ -90,3 +90,5 @@ drwxr-xr-x@  3 cmoullia  staff     96 16 Jan 18:29 etc/
 -rw-r--r--@  1 cmoullia  staff   1729 16 Jan 18:29 sbom.spdx.json
 drwxr-xr-x@  4 cmoullia  staff    128 16 Jan 18:29 share/
 ```
+
+- Test the formula by doing: `brew test idpbuilder`
