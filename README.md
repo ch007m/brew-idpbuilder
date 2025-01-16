@@ -1,6 +1,6 @@
 ## Formula of idpbuilder
 
-## HowTo guide
+## How To guide
 
 - Create a git repository containing a README.md and xxx.rb file
 - Edit the xxx.rb to define the Formula
@@ -60,4 +60,8 @@ class Idpbuilder < Formula
   end
 end
 ```
-- Update the formula.rb file
+- Update the formula.rb file and import the brew formulas in your IDEA
+- Install it using this command in a terminal
+```bash
+HOMEBREW_NO_INSTALL_FROM_API=1 brew install --build-from-source --verbose --debug idpbuilder
+```
