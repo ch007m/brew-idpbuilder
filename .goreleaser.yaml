@@ -13,12 +13,37 @@ before:
 
 # https://goreleaser.com/cookbooks/builds-complex-envs/?h=builds
 builds:
-  - env:
+  - id: linux
+    env:
       - CGO_ENABLED=0
     goos:
       - linux
-      - windows
+    goarch:
+      - amd64
+      - arm64
+      - arm
+    goarm:
+      - 7
+    flags:
+      - -trimpath
+
+  - id: osx
+    goos:
       - darwin
+    goarch:
+      - amd64
+      - arm64
+    flags:
+      - -trimpath
+
+  - id: windows
+    goos:
+      - windows
+    goarch:
+      - amd64
+      - arm64
+    flags:
+      - -trimpath
 
 # https://goreleaser.com/customization/archive/?h=archives
 archives:
