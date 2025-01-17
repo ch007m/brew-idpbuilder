@@ -10,7 +10,9 @@ You can create a git repository for that purpose and release it as documented he
 - Get the url of the released propject: https://github.com/ch007m/brew-idpbuilder/archive/refs/tags/v0.1.0.tar.gz
   
 Alternativetely, you can get from an existing project the URL of a tag or release: https://github.com/cnoe-io/idpbuilder/archive/refs/tags/v0.8.1.tar.gz
+
 Next, git clone the brew project and create a new Formula
+
 ```bash
 ❯ brew tap --force homebrew/core
 ❯ brew create --go --set-name <FORMULA_NAME> --set-license Apache-2.0 https://github.com/ch007m/brew-idpbuilder/archive/refs/tags/v0.1.0.tar.gz
