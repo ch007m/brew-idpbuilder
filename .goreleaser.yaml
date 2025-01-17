@@ -14,6 +14,7 @@ before:
 # https://goreleaser.com/cookbooks/builds-complex-envs/?h=builds
 builds:
   - id: linux
+    binary: hello
     env:
       - CGO_ENABLED=0
     goos:
@@ -30,6 +31,7 @@ builds:
       - "-X main.Version={{.Version}}"
 
   - id: osx
+    binary: hello
     goos:
       - darwin
     goarch:
@@ -41,6 +43,7 @@ builds:
       - "-X main.Version={{.Version}}"
 
   - id: windows
+    binary: hello
     goos:
       - windows
     goarch:
