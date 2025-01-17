@@ -1,4 +1,4 @@
-## Homebrew guides
+# Homebrew guides
 
 Formula Cookbook: https://docs.brew.sh/Formula-Cookbook
 
