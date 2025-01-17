@@ -2,13 +2,18 @@
 
 ## How to create a new formula
 
-- Create a git repository containing a README.md and dummy.rb file
-- Tag the project to release it: `v0.1.0` by example
+To package a project as a brew formula, it is needed to have a git repository with releases/tag.
+You can create a git repository for that purpose and release it as documented hereafter
+
+- Create a git repository containing a README.md
+- Tag the project to release it: `v0.1.0`
 - Get the url of the released propject: https://github.com/ch007m/brew-idpbuilder/archive/refs/tags/v0.1.0.tar.gz
-- Create locally a brew project to test it
+  
+Alternativetely, you can get from an existing project the URL of a tag or release: https://github.com/cnoe-io/idpbuilder/archive/refs/tags/v0.8.1.tar.gz
+Next, git clone the brew project and create a new Formula
 ```bash
-❯ brew create https://github.com/ch007m/brew-idpbuilder/archive/refs/tags/v0.1.0.tar.gz
-Formula name [brew-idpbuilder]: idpbuilder
+❯ brew tap --force homebrew/core
+❯ brew create --go --set-name <FORMULA_NAME> --set-license Apache-2.0 https://github.com/ch007m/brew-idpbuilder/archive/refs/tags/v0.1.0.tar.gz
 ==> Downloading https://github.com/ch007m/brew-idpbuilder/archive/refs/tags/v0.1.0.tar.gz
 ==> Downloading from https://codeload.github.com/ch007m/brew-idpbuilder/tar.gz/refs/tags/v0.1.0
 ######################################################################################################################################################################################################## 100.0%
@@ -23,14 +28,15 @@ Warning: Using subl because no editor was set in the environment.
 This may change in the future, so we recommend setting EDITOR
 or HOMEBREW_EDITOR to your preferred text editor.
 ```
-
+- Edit then the Formula generated under $(brew --prefix)/Library/Taps/homebrew/homebrew-core/Formula/<FIRST_LETTER_OF_FORMULA>/<FORMULA_NAME>.rb
+- 
 ## How create build/install the package
 
 - Git clone locally the homebrew core project
 ```
 ❯ brew tap --force homebrew/core
 ```
-- Create a new formula `idpbuilder.rb` under: $(brew --prefix)/Library/Taps/homebrew/homebrew-core/Formula
+- Create a new formula under the following path: $(brew --prefix)/Library/Taps/homebrew/homebrew-core/Formula
 ```
 # Documentation: https://docs.brew.sh/Formula-Cookbook
 #                https://rubydoc.brew.sh/Formula
