@@ -75,19 +75,19 @@ changelog:
 
 # https://goreleaser.com/customization/homebrew/?h=homebrew
 brews:
-  - name: idpbuilder
+  - name: hello
     repository:
       owner: ch007m
-      name: homebrew-idpbuilder
+      name: homebrew-helloworld
       branch: main
     commit_author:
       name: ch007m
       email: cmoulliard@redhat.com
     directory: Formula
-    homepage: https://cnoe.io/
-    description: IDP Client to create kind cluster
-    test: |
-      system "idpbuilder version"
+    #homepage: https://cnoe.io/
+    description: "Go HelloWorld example"
+    #test: |
+    #  system "idpbuilder version"
 
 # https://goreleaser.com/customization/release/#release
 release:
