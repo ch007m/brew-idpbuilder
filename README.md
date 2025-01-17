@@ -128,6 +128,8 @@ Uninstalling /opt/homebrew/Cellar/idpbuilder/0.8.1... (9 files, 46.2MB)
 ```
 - Add the `bottle do` block under the Formula
 
+**Important** the `bottle do` block must not been added for new formula not yet pushed on homebrew !!
+
 ## To audit the Formula
 
 You can run `brew audit --strict` to test the formula for adherence to Homebrew house style, which is loosely based on the [Ruby Style Guide](https://github.com/rubocop-hq/ruby-style-guide#the-ruby-style-guide). 
@@ -138,5 +140,9 @@ The audit command includes warnings for trailing whitespace, preferred URLs for 
 idpbuilder
   * line 11, col 3: Use 2 (not 4) spaces for indentation.
 Error: 1 problem in 1 formula detected.
+```
+Execute this audit command for new formulae
+```bash
+❯ brew audit --new idpbuilder
 ```
 
