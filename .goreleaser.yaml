@@ -91,6 +91,7 @@ brews:
 
 # https://goreleaser.com/customization/release/#release
 release:
+  target_commitish: '{{ .Commit }}'
   footer: >-
 
     ---
