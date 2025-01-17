@@ -5,20 +5,20 @@
 class Hello < Formula
   desc "Go HelloWorld example"
   homepage ""
-  version "0.1.7"
+  version "0.1.8"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/ch007m/homebrew-helloworld/releases/download/v0.1.7/homebrew-helloworld_Darwin_x86_64.tar.gz"
-      sha256 "019bcc8f82c1edd269962df5a28bd58066454722189df1408cf5bc9d95a21e88"
+      url "https://github.com/ch007m/homebrew-helloworld/releases/download/v0.1.8/homebrew-helloworld_Darwin_x86_64.tar.gz"
+      sha256 "c8196e3c0ed1d85b70dbdd5213821450d580de21e21ac75f867730aba72cf04a"
 
       def install
         bin.install "homebrew-helloworld"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/ch007m/homebrew-helloworld/releases/download/v0.1.7/homebrew-helloworld_Darwin_arm64.tar.gz"
-      sha256 "cfa79e8a30fadab95187a94503c4170d4c4c16943d425d1d48163215c919b6b0"
+      url "https://github.com/ch007m/homebrew-helloworld/releases/download/v0.1.8/homebrew-helloworld_Darwin_arm64.tar.gz"
+      sha256 "a11142ac169f014abcb5bc31908efc25328fb769ed8d0dc5194e45cde82d281a"
 
       def install
         bin.install "homebrew-helloworld"
@@ -29,8 +29,8 @@ class Hello < Formula
   on_linux do
     if Hardware::CPU.intel?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/ch007m/homebrew-helloworld/releases/download/v0.1.7/homebrew-helloworld_Linux_x86_64.tar.gz"
-        sha256 "db46357da6dbd7ce76836aef8ab604b7bb34dd9b0dc35f3d7a078139f71ae6fd"
+        url "https://github.com/ch007m/homebrew-helloworld/releases/download/v0.1.8/homebrew-helloworld_Linux_x86_64.tar.gz"
+        sha256 "cc6e0d6c83f2e189b4ff1a6c43b05234d9696b5770f6a26cd4a19249950cfff8"
 
         def install
           bin.install "homebrew-helloworld"
@@ -39,8 +39,8 @@ class Hello < Formula
     end
     if Hardware::CPU.arm?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/ch007m/homebrew-helloworld/releases/download/v0.1.7/homebrew-helloworld_Linux_arm64.tar.gz"
-        sha256 "bbdf507ea0c288495d896abf67d8303fe3a61168c7addf37e0006850d220e423"
+        url "https://github.com/ch007m/homebrew-helloworld/releases/download/v0.1.8/homebrew-helloworld_Linux_arm64.tar.gz"
+        sha256 "3271b0f448427d6ca921e5ffbaabb94409dfac83542fd55322d9a4090589ce17"
 
         def install
           bin.install "homebrew-helloworld"
