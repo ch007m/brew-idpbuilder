@@ -107,4 +107,5 @@ release:
   target_commitish: '{{ .Commit }}'
   footer: >-
     ---
+    
     Released by [GoReleaser](https://github.com/goreleaser/goreleaser).

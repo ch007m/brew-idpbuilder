@@ -10,7 +10,7 @@ brew install ch007m/helloworld/hello
 Next, call the application
 ```bash
 ❯ hello
-Hello World ! Version: 0.1.9
+Hello World ! Version: 0.1.10
 ```
 
 TODO: The name of the executable pushed on a GitHub [tag](https://github.com/ch007m/homebrew-helloworld/releases/tag/v0.1.9) should be `hello*.tar.gz` and not `homebrew-helloworld*.tar.gz`
