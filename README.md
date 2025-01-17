@@ -30,55 +30,52 @@ Warning: Using subl because no editor was set in the environment.
 This may change in the future, so we recommend setting EDITOR
 or HOMEBREW_EDITOR to your preferred text editor.
 ```
-- Edit then the Formula generated under $(brew --prefix)/Library/Taps/homebrew/homebrew-core/Formula/<FIRST_LETTER_OF_FORMULA>/<FORMULA_NAME>.rb
-- 
+- As alternative, edit/open the Formula generated under $(brew --prefix)/Library/Taps/homebrew/homebrew-core/Formula/<FIRST_LETTER_OF_FORMULA>/<FORMULA_NAME>.rb using your IDE.
+
 ## How create build/install the package
 
-- Git clone locally the homebrew core project
+Whzn you have created a new Formula, it is needed to build it locally as described hereafter:
+- Git clone locally the homebrew core project if not yet done
 ```
 ❯ brew tap --force homebrew/core
 ```
-- Create a new formula under the following path: $(brew --prefix)/Library/Taps/homebrew/homebrew-core/Formula
+- Create/edit the formula under the following path: $(brew --prefix)/Library/Taps/homebrew/homebrew-core/Formula/<FIRST_LETTER_OF_FORMULA>/<FORMULA_NAME>.rb
 ```
-# Documentation: https://docs.brew.sh/Formula-Cookbook
-#                https://rubydoc.brew.sh/Formula
-# PLEASE REMOVE ALL GENERATED COMMENTS BEFORE SUBMITTING YOUR PULL REQUEST!
 class Idpbuilder < Formula
-  desc ""
-  homepage ""
-  url "https://github.com/ch007m/brew-idpbuilder/archive/refs/tags/v0.1.0.tar.gz"
-  sha256 "f0297261768062331e08d2f5494c0e30298ca53715df53f9eeb6170f67cba4c4"
-  license ""
+  desc "IDP Client to create kind cluster."
+  homepage "https://cnoe.io/"
+  url "https://github.com/cnoe-io/idpbuilder.git",
+      tag:      "v0.8.1",
+      revision: "8c6cd9704ae118981a89b3c5b541db1924f31643"
+  license "Apache-2.0"
+  head "https://github.com/cnoe-io/idpbuilder.git", branch: "main"
 
-  # depends_on "cmake" => :build
+  depends_on "go" => :build
 
   def install
-    # Remove unrecognized options if they cause configure to fail
-    # https://rubydoc.brew.sh/Formula.html#std_configure_args-instance_method
-    system "./configure", "--disable-silent-rules", *std_configure_args
-    # system "cmake", "-S", ".", "-B", "build", *std_cmake_args
+    ldflags = %W[
+      -s -w
+      -X github.com/cnoe-io/idpbuilder/pkg/cmd/version.idpbuilderVersion=#{version} \
+      -X github.com/cnoe-io/idpbuilder/pkg/cmd/version.gitCommit=#{Utils.git_head} \
+      -X github.com/cnoe-io/idpbuilder/pkg/cmd/version.buildDate=#{time.strftime("%F")}
+    ]
+    system "go", "build", *std_go_args(ldflags:)
+
+    generate_completions_from_executable(bin/"idpbuilder", "completion")
   end
 
   test do
-    # `test do` will create, run in and delete a temporary directory.
-    #
-    # This test will fail and we won't accept that! For Homebrew/homebrew-core
-    # this will need to be a test that verifies the functionality of the
-    # software. Run the test with `brew test brew-idpbuilder`. Options passed
-    # to `brew install` such as `--HEAD` also need to be provided to `brew test`.
-    #
-    # The installed folder is not in the path, so use the entire path to any
-    # executables being tested: `system bin/"program", "do", "something"`.
-    system "false"
+    assert_match "Manage reference IDPs",
+                 shell_output("#{bin}/idpbuilder -h")
   end
 end
+
 ```
-- Update the formula.rb file and import the brew formulas in your IDEA
 - Install it using this command in a terminal
 ```bash
 HOMEBREW_NO_INSTALL_FROM_API=1 brew install --build-from-source --verbose --debug idpbuilder
 ```
-- If the build succeeds, you should then find the executable like its cellar folder
+- If the build succeeds, you should then find the executable:
 ```bash
 ❯ ls -la $(brew --prefix)/bin | grep idpbuilder
 lrwxr-xr-x@    1 cmoullia  staff        41 16 Jan 18:29 idpbuilder -> ../Cellar/idpbuilder/0.8.1/bin/idpbuilder
@@ -129,3 +126,4 @@ Uninstalling /opt/homebrew/Cellar/idpbuilder/0.8.1... (9 files, 46.2MB)
     sha256 cellar: :any_skip_relocation, arm64_sonoma: "afa70a99adf6120b23685f663cca39a51ae9efb36f4c85f7fcc5a633b9880778"
   end
 ```
+- Add the `bottle do` block under the Formula
