@@ -8,7 +8,9 @@ Instructions to submit a formula using a PR: https://docs.brew.sh/How-To-Open-a-
 
 Example of Formula PR: https://github.com/Homebrew/homebrew-core/pull/46886
 
-How to create its own TAP: https://docs.brew.sh/How-to-Create-and-Maintain-a-Tap
+How to create its own TAP: https://docs.brew.sh/How-to-Create-and-Maintain-a-Tap and use goreleaser to create the brew formula with the executable: https://goreleaser.com/customization/homebrew/?h=homebrew
+
+
 
 ## How to create a new formula
 
