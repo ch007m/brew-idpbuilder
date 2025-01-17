@@ -40,7 +40,7 @@ or HOMEBREW_EDITOR to your preferred text editor.
 ```
 - As alternative, edit/open the Formula generated under $(brew --prefix)/Library/Taps/homebrew/homebrew-core/Formula/<FIRST_LETTER_OF_FORMULA>/<FORMULA_NAME>.rb using your IDE.
 
-## How create build/install the package
+## How to build/install the package
 
 Whzn you have created a new Formula, it is needed to build it locally as described hereafter:
 - Git clone locally the homebrew core project if not yet done
