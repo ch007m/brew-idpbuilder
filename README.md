@@ -1,6 +1,6 @@
 ## Formula of idpbuilder
 
-## How To guide
+## How create a brew formula uide
 
 - Create a git repository containing a README.md and xxx.rb file
 - Edit the xxx.rb to define the Formula
@@ -90,8 +90,9 @@ drwxr-xr-x@  3 cmoullia  staff     96 16 Jan 18:29 etc/
 -rw-r--r--@  1 cmoullia  staff   1729 16 Jan 18:29 sbom.spdx.json
 drwxr-xr-x@  4 cmoullia  staff    128 16 Jan 18:29 share/
 ```
+## To test the formula
 
-- Test the formula by doing: `brew test idpbuilder`
+Test the formula by executing this command: `brew test idpbuilder`
 
 ## To generate the bottles
 
