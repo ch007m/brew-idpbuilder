@@ -8,6 +8,8 @@ Instructions to submit a formula using a PR: https://docs.brew.sh/How-To-Open-a-
 
 Example of Formula PR: https://github.com/Homebrew/homebrew-core/pull/46886
 
+How to create its own TAP: https://docs.brew.sh/How-to-Create-and-Maintain-a-Tap
+
 ## How to create a new formula
 
 To package a project as a brew formula, it is needed to have a git repository with releases/tag.
