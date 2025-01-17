@@ -18,7 +18,7 @@ class Idp2 < Formula
     end
     on_arm do
       url "https://github.com/cnoe-io/idpbuilder/releases/download/v0.8.1/idpbuilder-darwin-arm64.tar.gz"
-      sha256 "39b885668f07a1156f55ad3cb6b4b06c0b4ed6ef363db8a8c966aeabb1e67ad3"
+      sha256 "79192e9656d8d25e813d16179464095edcde13440490507a434ec97a318f1bae"
 
       def install
         bin.install "idpbuilder"
