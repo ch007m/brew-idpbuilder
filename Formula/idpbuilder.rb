@@ -5,45 +5,45 @@
 class Idpbuilder < Formula
   desc "IDP Client to create kind cluster"
   homepage "https://cnoe.io/"
-  version "0.8.1"
+  version "0.1.6"
 
   on_macos do
-    on_intel do
-      url "https://github.com/cnoe-io/idpbuilder/releases/download/v0.8.1/idpbuilder-darwin-amd64.tar.gz"
-      sha256 "64c0b81aa844aa3160e9c93d44eb17a5cdb0b7ff605eaff3467c94ebfd8c8f79"
+    if Hardware::CPU.intel?
+      url "https://github.com/ch007m/homebrew-idpbuilder/releases/download/v0.1.6/homebrew-idpbuilder_Darwin_x86_64.tar.gz"
+      sha256 "0d4ebf6aa566b1b9597d723e981a428b58b4a3e06499115e05d17288e06e2bf5"
 
       def install
-        bin.install "idpbuilder"
+        bin.install "homebrew-idpbuilder"
       end
     end
-    on_arm do
-      url "https://github.com/cnoe-io/idpbuilder/releases/download/v0.8.1/idpbuilder-darwin-arm64.tar.gz"
-      sha256 "79192e9656d8d25e813d16179464095edcde13440490507a434ec97a318f1bae"
+    if Hardware::CPU.arm?
+      url "https://github.com/ch007m/homebrew-idpbuilder/releases/download/v0.1.6/homebrew-idpbuilder_Darwin_arm64.tar.gz"
+      sha256 "acb345204076c54d0c63d3f92973aa905c9ad59683b2f669cdfab3caed656e13"
 
       def install
-        bin.install "idpbuilder"
+        bin.install "homebrew-idpbuilder"
       end
     end
   end
 
   on_linux do
-    on_intel do
+    if Hardware::CPU.intel?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/cnoe-io/idpbuilder/releases/download/v0.8.1/idpbuilder-linux-amd64.tar.gz"
-        sha256 "03934727bfbf39b1e61a74d8e045796cda2de14f8ce4c01df27f43d4494021de"
+        url "https://github.com/ch007m/homebrew-idpbuilder/releases/download/v0.1.6/homebrew-idpbuilder_Linux_x86_64.tar.gz"
+        sha256 "ee824d3a123288def02741a392ced7b4f36239db240f8b0139fa08c05f4039b2"
 
         def install
-          bin.install "idpbuilder"
+          bin.install "homebrew-idpbuilder"
         end
       end
     end
-    on_arm do
+    if Hardware::CPU.arm?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/cnoe-io/idpbuilder/releases/download/v0.8.1/idpbuilder-linux-arm64.tar.gz"
-        sha256 "ceaa2a3a62168cb67db4179e6fbf1c5b72d86fb0351ded85bf7032c4477ac5cf"
+        url "https://github.com/ch007m/homebrew-idpbuilder/releases/download/v0.1.6/homebrew-idpbuilder_Linux_arm64.tar.gz"
+        sha256 "9fcc1f8bb0646d06d959e19dac709f977afe46889fd597f02a43a339b6e2d8ac"
 
         def install
-          bin.install "idpbuilder"
+          bin.install "homebrew-idpbuilder"
         end
       end
     end
