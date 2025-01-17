@@ -1,6 +1,11 @@
 ## Homebrew guides
 
+Formula Cookbook: https://docs.brew.sh/Formula-Cookbook
+
+How to add a formula: https://docs.brew.sh/Adding-Software-to-Homebrew
+
 Instructions to submit a formula using a PR: https://docs.brew.sh/How-To-Open-a-Homebrew-Pull-Request
+
 Example of Formula PR: https://github.com/Homebrew/homebrew-core/pull/46886
 
 ## How to create a new formula
