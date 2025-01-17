@@ -3,6 +3,10 @@
 
 version: 2
 
+# https://goreleaser.com/customization/project/
+# Name used prefix of the executable name created by the archive module
+project_name: hello
+
 # https://goreleaser.com/customization/hooks/
 before:
   hooks:
@@ -102,7 +106,5 @@ brews:
 release:
   target_commitish: '{{ .Commit }}'
   footer: >-
-
     ---
-
     Released by [GoReleaser](https://github.com/goreleaser/goreleaser).
