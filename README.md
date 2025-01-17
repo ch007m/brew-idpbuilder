@@ -1,4 +1,14 @@
-# Homebrew guides
+# Homebrew and goreleaser HelloWorld
+
+This project is a dummy which has been created to explore how to use a homebrew Tap repository, generate the formula using
+goreleaser tool.
+
+To use the formula, simply install the formula using this command:
+```bash
+brew install ch007m/helloworld/hello
+```
+
+# Homebrew documentation
 
 Formula Cookbook: https://docs.brew.sh/Formula-Cookbook
 
@@ -9,8 +19,6 @@ Instructions to submit a formula using a PR: https://docs.brew.sh/How-To-Open-a-
 Example of Formula PR: https://github.com/Homebrew/homebrew-core/pull/46886
 
 How to create its own TAP: https://docs.brew.sh/How-to-Create-and-Maintain-a-Tap and use goreleaser to create the brew formula with the executable: https://goreleaser.com/customization/homebrew/?h=homebrew
-
-
 
 ## How to create a new formula
 

@@ -26,6 +26,8 @@ builds:
       - 7
     flags:
       - -trimpath
+    ldflags:
+      - "-X main.Version={{.Version}}"
 
   - id: osx
     goos:
@@ -35,6 +37,8 @@ builds:
       - arm64
     flags:
       - -trimpath
+    ldflags:
+      - "-X main.Version={{.Version}}"
 
   - id: windows
     goos:
@@ -44,6 +48,8 @@ builds:
       - arm64
     flags:
       - -trimpath
+    ldflags:
+      - "-X main.Version={{.Version}}"
 
 # https://goreleaser.com/customization/archive/?h=archives
 archives:
