@@ -1,4 +1,7 @@
-## Formula of idpbuilder
+## Homebrew guides
+
+Instructions to submit a formula using a PR: https://docs.brew.sh/How-To-Open-a-Homebrew-Pull-Request
+Example of Formula PR: https://github.com/Homebrew/homebrew-core/pull/46886
 
 ## How to create a new formula
 
@@ -145,4 +148,9 @@ Execute this audit command for new formulae
 ```bash
 ❯ brew audit --new idpbuilder
 ```
+## Get or populate the url sha256
+
+After editing the formula, you can run `brew fetch your-formula --build-from-source` to fetch the tarball and display the new checksum. 
+
+If you've already downloaded the tarball somewhere, you can calculate the hash with `openssl sha256 < some_tarball.tar.gz` or `shasum -a 256 some_tarball.tar.gz`
 
