@@ -40,7 +40,7 @@ class Idpbuilder < Formula
     on_arm do
       if Hardware::CPU.is_64_bit?
         url "https://github.com/cnoe-io/idpbuilder/releases/download/v0.8.1/idpbuilder-linux-arm64.tar.gz"
-        sha256 "b890a7a212a3fc69e6ea4b2a29d59f80ed501a27ad654c819a155cc7c3c6aa8d"
+        sha256 "ceaa2a3a62168cb67db4179e6fbf1c5b72d86fb0351ded85bf7032c4477ac5cf"
 
         def install
           bin.install "idpbuilder"
