@@ -1,6 +1,6 @@
 # Homebrew and goreleaser HelloWorld
 
-This project is a dummy which has been created to explore how to use a homebrew Tap repository, generate the formula using
+This project is a dummy project which has been created to explore how to use a homebrew Tap repository, generate the formula using
 goreleaser tool.
 
 To use the formula, simply install the formula using this command:
@@ -13,8 +13,6 @@ Next, call the application
 Hello World ! Version: 0.1.10
 ```
 
-TODO: The name of the executable pushed on a GitHub [tag](https://github.com/ch007m/homebrew-helloworld/releases/tag/v0.1.9) should be `hello*.tar.gz` and not `homebrew-helloworld*.tar.gz`
-
 # Homebrew documentation
 
 Formula Cookbook: https://docs.brew.sh/Formula-Cookbook
@@ -26,6 +24,8 @@ Instructions to submit a formula using a PR: https://docs.brew.sh/How-To-Open-a-
 Example of Formula PR: https://github.com/Homebrew/homebrew-core/pull/46886
 
 How to create its own TAP: https://docs.brew.sh/How-to-Create-and-Maintain-a-Tap and use goreleaser to create the brew formula with the executable: https://goreleaser.com/customization/homebrew/?h=homebrew
+
+Github action and PAT: https://goreleaser.com/errors/resource-not-accessible-by-integration/#1-use-a-personal-access-token-pat-for-the-entire-process
 
 ## How to create a new formula
 
