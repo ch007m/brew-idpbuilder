@@ -5,20 +5,20 @@
 class Hello < Formula
   desc "Go HelloWorld example"
   homepage ""
-  version "0.1.10"
+  version "0.1.3"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/ch007m/homebrew-helloworld/releases/download/v0.1.10/hello_Darwin_x86_64.tar.gz"
-      sha256 "6c7e656bf224e98410834cfa81d89d1a700b0f07e942fa1073b6ec0914141d41"
+      url "https://github.com/ch007m/go-helloworld/releases/download/v0.1.3/hello_Darwin_x86_64.tar.gz"
+      sha256 "ed84dfc7bdf40aa3681a477dc14ee1d0b6f379771bd3c9ab99a116765571c7f2"
 
       def install
         bin.install "hello"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/ch007m/homebrew-helloworld/releases/download/v0.1.10/hello_Darwin_arm64.tar.gz"
-      sha256 "ba6e99817a43dfe15103d40ea7be3bf3c5259a7f6d933c7647894273177b4f23"
+      url "https://github.com/ch007m/go-helloworld/releases/download/v0.1.3/hello_Darwin_arm64.tar.gz"
+      sha256 "ceffca0cb95cf98d88bfc2ab46ce105cca4f343d6c8b22f573fc4dcf56118a1b"
 
       def install
         bin.install "hello"
@@ -29,8 +29,8 @@ class Hello < Formula
   on_linux do
     if Hardware::CPU.intel?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/ch007m/homebrew-helloworld/releases/download/v0.1.10/hello_Linux_x86_64.tar.gz"
-        sha256 "63674fd4880d86c2a22763238cf6b61c4c4fcdd03af10c47b048a4f8b10ad419"
+        url "https://github.com/ch007m/go-helloworld/releases/download/v0.1.3/hello_Linux_x86_64.tar.gz"
+        sha256 "8638aea738f7b0432462c5c47714b0ed2b485af25aaa319b6cd4b945f5ac60ef"
 
         def install
           bin.install "hello"
@@ -39,8 +39,8 @@ class Hello < Formula
     end
     if Hardware::CPU.arm?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/ch007m/homebrew-helloworld/releases/download/v0.1.10/hello_Linux_arm64.tar.gz"
-        sha256 "87009be890f5d9d0dcbdcf27316bc14aaf3c351d37a64d1a87746c01f241d800"
+        url "https://github.com/ch007m/go-helloworld/releases/download/v0.1.3/hello_Linux_arm64.tar.gz"
+        sha256 "ac44ee4b8005c759859d9edea8ea055ad186282828112567bae0bbd591629713"
 
         def install
           bin.install "hello"
