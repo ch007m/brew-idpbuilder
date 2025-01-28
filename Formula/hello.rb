@@ -5,20 +5,20 @@
 class Hello < Formula
   desc "Go HelloWorld example"
   homepage ""
-  version "0.1.3"
+  version "0.1.11"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/ch007m/go-helloworld/releases/download/v0.1.3/hello_Darwin_x86_64.tar.gz"
-      sha256 "ed84dfc7bdf40aa3681a477dc14ee1d0b6f379771bd3c9ab99a116765571c7f2"
+      url "https://github.com/ch007m/go-helloworld/releases/download/v0.1.11/hello_Darwin_x86_64.tar.gz"
+      sha256 "83c2b1d6c9c454201239233d3ac355844f15c5ac65e246fab19cd16aa13038c9"
 
       def install
         bin.install "hello"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/ch007m/go-helloworld/releases/download/v0.1.3/hello_Darwin_arm64.tar.gz"
-      sha256 "ceffca0cb95cf98d88bfc2ab46ce105cca4f343d6c8b22f573fc4dcf56118a1b"
+      url "https://github.com/ch007m/go-helloworld/releases/download/v0.1.11/hello_Darwin_arm64.tar.gz"
+      sha256 "fe09c652cffe566b4bcb85209e6a2a3cd166f5dd1612531fc8b1267d38813438"
 
       def install
         bin.install "hello"
@@ -29,8 +29,8 @@ class Hello < Formula
   on_linux do
     if Hardware::CPU.intel?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/ch007m/go-helloworld/releases/download/v0.1.3/hello_Linux_x86_64.tar.gz"
-        sha256 "8638aea738f7b0432462c5c47714b0ed2b485af25aaa319b6cd4b945f5ac60ef"
+        url "https://github.com/ch007m/go-helloworld/releases/download/v0.1.11/hello_Linux_x86_64.tar.gz"
+        sha256 "bbf8c923aa9910f3e797f049bf40bf0836f5ef9b25070ccca8d902e4cc3f0721"
 
         def install
           bin.install "hello"
@@ -39,8 +39,8 @@ class Hello < Formula
     end
     if Hardware::CPU.arm?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/ch007m/go-helloworld/releases/download/v0.1.3/hello_Linux_arm64.tar.gz"
-        sha256 "ac44ee4b8005c759859d9edea8ea055ad186282828112567bae0bbd591629713"
+        url "https://github.com/ch007m/go-helloworld/releases/download/v0.1.11/hello_Linux_arm64.tar.gz"
+        sha256 "621c2dd1790cb8765625c86db44069977e33f15bcd09d03d0276c64b79938176"
 
         def install
           bin.install "hello"
